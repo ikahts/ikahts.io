@@ -1,84 +1,41 @@
-# ikahts.io
+# Larahpanel: Lara Host Panel
+
+Open Source web hosting panel based in laravel
+
 # LPanel: Webhosting Panel
 
 Open Source web hosting panel based in Laravel
 
-[![build](https://github.com/Roskus/lpanel/actions/workflows/laravel.yml/badge.svg)](https://github.com/Roskus/lpanel/actions/workflows/laravel.yml)
-
-### Login
-![Lpanel Login Screenshot](./doc/screenshoot/login.png)
-
-### Dashboard
-![Lpanel Dashboard Screenshot](./doc/screenshoot/dashboard.png)
-
 ## Features
 
 * Virtual Host administration
+    * Nginx
+    * Apache
   * Nginx
   * Apache
 * Database administration
+    * MariaDB / MySQL
+    * Postgres
   * MariaDB / MySQL
   * Postgres
 * Linux user administration
 
-## Setup docker
-```terminal
-docker-compose build
-docker-compose up -d
-```
-
-## Setup
-Clone project
-```terminal
-git clone git@github.com:Roskus/lpanel.git
-```
-Just run make
-```terminal
-make install
-```
-
 ## Commands
 
-### User panel create
-
-```terminal
-php artisan user:create
-```
-
+### Create a website virtual host by default create a nginx virtualhost.
 ### Create a website virtual host by default create a nginx virtualhost
 
 ```terminal
 php artisan website:create domain.com
 ```
 
+### Create a website virtual host with apache virtualhost.
 ### Create a website virtual host with apache virtualhost
 
 ```terminal
-php artisan website:create domain_data server=apache
+php artisan database:create domain_data server=apache
 ```
-
-### Create a database by default use MariaDB
-
-```terminal
-php artisan database:create dbname
-```
-
-### Create a database by type
-
-```terminal
-php artisan database:create dbname type=postgresql
-```
-
-### Create a database user
-
-```terminal
-php artisan database:user-create
-```
-
-### Create a linux user
-
-```terminal
-php artisan linux:user-create name
+@@ -46,14 +45,22 @@ php artisan linux:user-create
 ```
 
 ## Tests
@@ -90,6 +47,7 @@ php artisan test
 
 ## Made with ❤️
 
+Design based in StartBootstrap
 #### Design based in StartBootstrap
 
 https://github.com/startbootstrap/startbootstrap-sb-admin-2
